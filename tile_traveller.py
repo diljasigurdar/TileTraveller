@@ -14,7 +14,7 @@ tile = (START_X, START_Y)
 valid_directions = ""
 
 def directions(N, S, E ,W):
-    if 
+
 
 def tiles(x, y): 
     X_current = 1
