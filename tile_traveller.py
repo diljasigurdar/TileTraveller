@@ -13,12 +13,22 @@ tile = (START_X, START_Y)
 
 valid_directions = ""
 
+input_direction = input("Direction: ")
+
+X_current = 1
+Y_current = 1
+
+print("You can travel: ", valid_directions)
+
 def directions(N, S, E ,W):
-    if 
+    N = "(N)orth"
+    S = "(S)outh"
+    E = "(E)ast"
+    W = "(W)est"
+    return N, S, E, W
+
 
 def tiles(x, y): 
-    X_current = 1
-    Y_current = 1
     if tile == (1, 1):
         valid direction = (N)
     elif tile == (1, 2):
@@ -42,8 +52,17 @@ def tiles(x, y):
 
 def invalid():
 
-def print_directions(START_X, START_Y):
-    print("You can travel: ", valid_directions)
+def print_directions(X_current, Y_current):
+    while 1 <= X_current <= 3 and 1 <= Y_current <= 3:
+        if  input_direction == "n" or "N":
+            Y_current += 1
+        elif input_direction == "s" or "S":
+            Y_current -= 1
+        elif input_direction == "w" or "W":
+            X_current -= 1
+        elif input_direction == "e" or "E":
+            X_current += 1
+        return(X_current, Y_current)
 
 
 
