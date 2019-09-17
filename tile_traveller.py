@@ -13,42 +13,67 @@ tile = (START_X, START_Y)
 
 valid_directions = ""
 
-def directions(N, S, E ,W):
+X_current = 1
+Y_current = 1
 
+N = "n"
+S = "s"
+E = "e"
+W = "w"
 
 def tiles(x, y): 
-    X_current = 1
-    Y_current = 1
     if tile == (1, 1):
-        valid direction = (N)
+        valid_directions = "n"
     elif tile == (1, 2):
-        valid_directions = (N, E, S)
+        valid_directions = "nes"
     elif tile == (2, 2):
-        valid_directions = (S, W)
+        valid_directions = "sw"
     elif tile == (2, 1):
-        valid_directions = (N)
+        valid_directions = "n"
     elif tile == (1, 3):
-        valid_directions = (S, E)
+        valid_directions = "se"
     elif tile == (2, 3):
-        valid_directions = (W, E)
+        valid_directions = "we"
     elif tile == (3, 3):
-        valid_directions = (W, S)
+        valid_directions = "ws"
     elif tile == (3, 2):
-        valid_directions = (N, S)
+        valid_directions = "ns"
     else:
         print("Victory!")
-        break
+    return valid_directions
+
+valid_directions = tiles(X_current, Y_current)
 
 
-def invalid():
+def directions(x,y):
+    while 1 <= x <= 3 and 1 <= y <= 3:
+        if input_direction == "n" or input_direction == "N":
+            y += 1
+        elif input_direction == "s" or input_direction == "S":
+            y -= 1
+        elif input_direction == "w" or input_direction == "W":
+            x -= 1
+        elif input_direction == "e" or input_direction == "E":
+            x += 1
+    return(x,y)
 
-def print_directions(START_X, START_Y):
-    print("You can travel: ", valid_directions)
+
+
+for ch in valid_directions:
+    if ch == N:
+        print("You can travel: ", valid_directions)
+    elif ch == S:
+        print("You can travel: ", valid_directions)
+    elif ch == W:
+        print("You can travel: ", valid_directions)
+    elif ch == E:
+        print("You can travel: ", valid_directions)
+
+print_direction = directions(input_direction)  
+input_direction = input("Direction: ")
 
 
 
-direction = 
-print("You can travel: ", direction)
-N_S_W_E = input("Direction: ")
+
 
 
